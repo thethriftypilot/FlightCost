@@ -4,7 +4,7 @@
 
 **Know what your flying really costs.** Developed by The Thrifty Pilot.
 
-FlightCost is a local Windows aircraft ownership desk built with Electron, React, TypeScript and SQLite. It separates recorded cash payments, estimated operating economics, and planned spending. There are no accounts, subscriptions, advertisements, synchronization services, or telemetry.
+FlightCost is a Windows desktop app for aircraft owners who want to understand what they spend and what their flying really costs. Track payments and receipts, log flight hours, estimate trips, plan recurring expenses, and see how flying more or less changes your cost per hour. Your records stay in a local SQLite database, with backup and export tools you control. There are no accounts, subscriptions, advertisements, cloud synchronization, or telemetry.
 
 ## Status
 
@@ -32,6 +32,19 @@ Reserve allowances are estimates, not money deposited into a reserve account. Se
 - Ownership PDF reports and printing, local SQLite backup verification and transactional restoration.
 - Optional clearly labeled fictional Warrior profile, separated by aircraft identity.
 - Dark and light themes; no network dependency for normal operation.
+
+## Install on Windows
+
+**Requires Windows 11 x64.** No Node.js, Python, database server, or account is needed to use the installer.
+
+1. Open [Releases](https://github.com/thethriftypilot/FlightCost/releases) and choose the Windows preview.
+2. Under **Assets**, download `FlightCost-Setup-0.9.0.exe` and `SHA256SUMS.txt`. GitHub's source-code ZIP is not an installer. If no installer is listed yet, use the source-build instructions below.
+3. Compare the installer's SHA-256 checksum with `SHA256SUMS.txt` using `Get-FileHash` in PowerShell.
+4. Close FlightCost if it is running, run the installer, and choose the installation folder.
+5. Launch **FlightCost** from the Start menu. Add your aircraft and assumptions, or explore the clearly labeled fictional example.
+6. Use **Settings → Create verified backup** after entering records you want to keep.
+
+The preview installer is unsigned, so Windows may show an unknown-publisher warning. Verify the source and checksum before deciding whether to run it. See the [full installation and recovery guide](INSTALLATION.md).
 
 ## Requirements and development
 
