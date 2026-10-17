@@ -1,0 +1,13 @@
+{
+  "files": { "includes": ["src/**", "electron/**", "tests/**", "scripts/*.mjs", "vite.config.ts"] },
+  "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },
+  "javascript": { "formatter": { "quoteStyle": "single", "semicolons": "always" } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "none",
+      "suspicious": { "noExplicitAny": "error" },
+      "correctness": { "noUnusedImports": "warn", "noUnreachable": "error" }
+    }
+  }
+}
